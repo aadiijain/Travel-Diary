@@ -1,0 +1,14 @@
+<div class="col-xs-12">
+    <div class="row">
+        <button class="btn btn-success">New Place</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+      
+        <app-place-item
+        *ngFor="let placeEl of places"
+        [place]="placeEl"></app-place-item>
+    </div>
+</div>

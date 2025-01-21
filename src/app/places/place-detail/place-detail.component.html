@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-xs-12">
+        <img [src]="place.imagePath" 
+        alt="{{place.name}}" 
+        class="img-responsive"
+        style="max-height: 300px;">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h1>{{place.name}}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group"
+        appDropdown> 
+    <button
+        type="button"
+        class="btn btn-primary dropdown-toggle">
+        Manage Place <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a (click)="onAddToShoppingList()" style="cursor: pointer;">To Shopping List</a></li>
+        <li><a href="#">Edit Place</a></li>
+        <li><a href="#">Delete Place</a></li>
+    </ul>
+</div>
+</div>
+</div>
+<div class="row">
+    <div class = "col-xs-12">
+   {{place.description}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+     <ul class="list-group-item"
+     *ngFor="let thing of place.things">
+     {{thing.name}} - {{thing.amount}}
+    </ul>
+    </div>
+</div>

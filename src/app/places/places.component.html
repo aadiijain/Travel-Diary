@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-5">
+        <app-place-list></app-place-list>
+    </div>
+    <div class="col-md-7">
+        <app-place-detail
+        *ngIf="selectedPlace; else infoText"
+        [place]="selectedPlace"></app-place-detail>
+        <ng-template #infoText>
+            <p>Please select a Place!</p>
+        </ng-template>
+    </div>
+</div>
